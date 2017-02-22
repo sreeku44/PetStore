@@ -16,8 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+  // [MBProgressHUD showHUDAddedTo:self.view animated:YES];  //to show the animation from MBprogressHUD
+    
+    StepperView *stepperView = [[StepperView alloc] initWithFrame:CGRectMake(60, 250, 300, 60)];
+    //stepperView.delegate = self;
+//    
+    [self.view addSubview:stepperView];
+    
+   // [MBProgressHUD hideHUDForView:self.view animated:YES]; // To stop the the animation
+    
 }
+
+//-(void) stepperButtonChanged:(int)value {
+//    NSLog(@"sss");
+//}
 
 
 - (void)didReceiveMemoryWarning {
